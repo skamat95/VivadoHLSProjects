@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Make_LUT_MET.c" path="/data/gomber/VivadoHLSProjects/Make_LUT_MET/Make_LUT_MET.c"/>
+    <originFiles name="Make_LUT_MET.h" path="/data/gomber/VivadoHLSProjects/Make_LUT_MET/Make_LUT_MET.h"/>
+    <originFiles name="atan2.h" path="/data/gomber/VivadoHLSProjects/Make_LUT_MET/atan2.h"/>
+    <originFiles name="cos.h" path="/data/gomber/VivadoHLSProjects/Make_LUT_MET/cos.h"/>
+    <originFiles name="sine.h" path="/data/gomber/VivadoHLSProjects/Make_LUT_MET/sine.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test_Make_LUT_MET.c" path="/data/gomber/VivadoHLSProjects/Make_LUT_MET/test_Make_LUT_MET.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
