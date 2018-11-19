@@ -5,10 +5,12 @@
 
 const uint16_t NCaloLayer1Cards = 18;
 
-const uint16_t NCaloLayer1Eta = 17;
+const uint16_t NCaloLayer1Eta = 6; //17;
 const uint16_t NCaloLayer1Phi = 4;
 
 const uint16_t NCrystalsPerEtaPhi = 5;
+
+const uint16_t Total_clusters = 30;
 
 const uint16_t NCrystalsInPhi = (NCaloLayer1Cards * NCaloLayer1Phi * NCrystalsPerEtaPhi);
 const uint16_t NCrystalsInEta = (NCaloLayer1Eta * NCrystalsPerEtaPhi);

@@ -1576,9 +1576,9 @@ bool getClustersInCard(uint16_t crystals[NCaloLayer1Eta][NCaloLayer1Phi][NCrysta
                        uint16_t peakPhi[NCaloLayer1Eta][NCaloLayer1Phi],
                        uint16_t towerET[NCaloLayer1Eta][NCaloLayer1Phi],
                        uint16_t clusterET[NCaloLayer1Eta][NCaloLayer1Phi],
-		       uint16_t SortedCluster_ET[30],
-		       uint16_t SortedPeak_Eta[30],
-		       uint16_t SortedPeak_Phi[30]) {
+					   uint16_t SortedCluster_ET[Total_clusters],
+					   uint16_t SortedPeak_Eta[Total_clusters],
+					   uint16_t SortedPeak_Phi[Total_clusters]) {
 #pragma HLS PIPELINE II=6
 #pragma HLS ARRAY_PARTITION variable=crystals complete dim=0
 #pragma HLS ARRAY_PARTITION variable=peakEta complete dim=0
@@ -1603,9 +1603,9 @@ bool getClustersInCard(uint16_t crystals[NCaloLayer1Eta][NCaloLayer1Phi][NCrysta
 #pragma HLS ARRAY_PARTITION variable=sortedpeaketa complete dim=0
   uint16_t sortedpeakphi[5];
 #pragma HLS ARRAY_PARTITION variable=sortedpeakphi complete dim=0
-  uint16_t SortedCluster_ET1[30];
-  uint16_t SortedPeak_Eta1[30];
-  uint16_t SortedPeak_Phi1[30];
+  uint16_t SortedCluster_ET1[Total_clusters];
+  uint16_t SortedPeak_Eta1[Total_clusters];
+  uint16_t SortedPeak_Phi1[Total_clusters];
 
 
 #pragma HLS ARRAY_PARTITION variable=preMergePeakEta complete dim=0
@@ -1629,7 +1629,7 @@ bool getClustersInCard(uint16_t crystals[NCaloLayer1Eta][NCaloLayer1Phi][NCrysta
     }
 
 
-  for(int i=0; i<30; i++)
+  for(int i=0; i<Total_clusters; i++)
     {
       SortedCluster_ET1[i]=0;
       SortedPeak_Eta1[i]=0;
@@ -1638,7 +1638,7 @@ bool getClustersInCard(uint16_t crystals[NCaloLayer1Eta][NCaloLayer1Phi][NCrysta
     }
 
 
-  for(int i=0; i<30; i++)
+  for(int i=0; i<Total_clusters; i++)
     {
       SortedCluster_ET[i]=0;
       SortedPeak_Eta[i]=0;
